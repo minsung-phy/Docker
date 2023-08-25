@@ -1,0 +1,5 @@
+https://opencvlib.weebly.com/blog/docker-vscode
+
+
+docker pull truevoly/oracle-12c
+docker run -d truevoly/oracle-12c

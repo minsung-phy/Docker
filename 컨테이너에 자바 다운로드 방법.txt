@@ -1,0 +1,29 @@
+1. jdk(개발 자바) 다운로드
+
+2. docker cp jdk-8u271-linux-x64.tar.gz dcdf5ea03d3b:/ 
+--> 컨테이너에 jdk 파일 복사하기
+
+3. docker exec -it dcdf5ea03d3b /bin/bash -l
+컨테이너로 들어가기
+
+4. 압축 풀기
+tar.gz 압축풀기 : tar -xvzf (압축파일명).tar.gz
+d
+5. 압축 해제된 폴더를 /usr/local/java에 mv로 옮긴다
+/usr/local/java는 형식적으로 프로그램을 모아두는 곳
+
+mv (이동할 파일명) (이동할 위치)
+
+6. 환경변수세팅
+vi $HOME/.profile 
+(i를 눌러서)
+export JAVA_HOME=/usr/local/java
+export PATH=$JAVA_HOME/bin:$PATH
+(입력하고 esc누르고)
+:wq
+
+
+
+* java 설치 후 db로 접속하는 방법
+sqlplus sys/oracle as sysdba -> db로 접속 (cmd에서)
+
